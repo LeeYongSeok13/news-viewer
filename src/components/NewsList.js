@@ -18,7 +18,7 @@ const NewsListBlock = styled.div`
 
 const NewsList = ({ category }) => {
   const [loading, response, error] = usePromise(() => {
-    const query = category === 'all' ? '' : `&category`;
+    const query = category === 'all' ? '' : `&category=${category}`;
     return axios.get(
       `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=1e09213834244ed29377d447b9619565`,
     );

@@ -69,7 +69,7 @@ const Category = styled(NavLink)`
   }
 `;
 
-const Categories = ({ onSelect, category }) => {
+const Categories = () => {
   return (
     <CategoriesBlock>
       {categories.map((c) => (
